@@ -5,21 +5,21 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/actions';
 
 export default function Contact({ contact }) {
-  const { id, name, number } = contact;
+  const { id, text, phone } = contact;
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteContact(contact.id));
+  const handleDelete = () => dispatch(deleteContact(id));
 
   return (
     <li key={id} className={css.contactItem}>
       <div>
         <div className={css.item}>
           <FaUser />
-          <p>{name}</p>
+          <p>{text}</p>
         </div>
         <div className={css.item}>
           <BsFillTelephoneFill />
-          <p>{number}</p>
+          <p>{phone}</p>
         </div>
       </div>
 
