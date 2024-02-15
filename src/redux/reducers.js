@@ -1,7 +1,9 @@
 import { setFilter } from './actions';
 
 const initialState = {
-  filter: '',
+  filters: {
+    name: '',
+  },
 };
 
 export const reducer = (state = initialState, action) => {
