@@ -19,7 +19,7 @@ const contactsSlice = createSlice({
       return state.filter(contact => contact.id !== action.payload);
     },
     addContact: (state, action) => {
-      state.push(action.payload);
+      return [...state, action.payload];
     },
   },
 });
